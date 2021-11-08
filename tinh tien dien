@@ -1,0 +1,30 @@
+//tinh tien dien
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cout << "Nhap vao so chi kW : ";
+	cin >> n;
+	int tien;
+	if (n <= 100 && n>=0)
+	{
+		tien = 500 * n;
+		cout << "Tien dien phai tra la : " << tien;
+	}
+	else if (n > 100 && n <= 250)
+	{
+		tien = 100 * 500 + (n - 100) * 800;
+		cout << "Tien dien phai tra la : " << tien;
+	}
+	else if (n > 250 && n <= 350)
+	{
+		tien = 100 * 500 + 150 * 800 + (n - 250) * 1000;
+		cout << "Tien dien phai tra la : " << tien;
+	}
+	else if ( n > 350)
+	{
+		tien = 100 * 500 + 150 * 800 + 100 * 1000 + (n - 350) * 1500;
+		cout << "Tien dien phai tra la : " << tien;
+	}
+}
