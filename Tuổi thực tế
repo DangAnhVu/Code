@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main()
+{
+	int nNamSinh;
+	int nYear;
+
+	cout << "Nhap vao nam sinh : ";
+	cin >> nNamSinh;
+
+	time_t Time = time(NULL);
+
+	tm* Now = localtime(&Time);
+	nYear = Now->tm_year+1900;
+
+	cout << "Ban sinh nam : " << nNamSinh << endl;
+	cout << "Tuoi cua ban la : " << nYear - nNamSinh << endl;
+	return 0;
+}
