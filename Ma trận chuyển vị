@@ -1,0 +1,39 @@
+#include<iostream>
+#include<time.h>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+	int a[100][100];
+	int row, col;
+	cout << "Nhap vao so hang : ";
+	cin >> row;
+	cout << "Nhap vao so cot : ";
+	cin >> col;
+	srand(time(NULL));
+	for (int i = 1; i <= row; i++)
+	{
+		for (int j = 1; j <= col; j++)
+		{
+			a[i][j] = rand() % 20;
+		}
+	}
+	cout << "Xuat mang\n";
+	for (int i = 1; i <= row; i++)
+	{
+		for (int j = 1; j <= col; j++)
+		{
+			cout << a[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "Ma tran chuyen vi cua ma tran tren la : \n";
+	for (int i = 1; i <= col; i++)
+	{
+		for (int j = 1; j <= row; j++)
+		{
+			cout << a[j][i] << "\t";
+		}
+		cout << endl;
+	}
+}
